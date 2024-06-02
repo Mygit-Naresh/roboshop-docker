@@ -1,4 +1,4 @@
-FROM nginx:1
+FROM nginx
 EXPOSE 80/tcp
 RUN rm -rf /usr/share/nginx/html/*
 RUN rm -rf /etc/nginx/nginx.conf
