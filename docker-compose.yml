@@ -3,10 +3,10 @@ networks:
     external: true
     name: roboshopnw
 services:
-  mongodb:
-    image: mongdb:v1.0
-    networks:
-      - roboshopnw
+  # mongodb:
+  #   image: mongdb:v1.0
+  #   networks:
+  #     - roboshopnw
   catalogue:
     image: catalogue:v1.0
     networks:
