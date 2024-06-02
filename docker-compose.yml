@@ -1,0 +1,15 @@
+services:
+  mongodb:
+    image: mongdb:v1.0
+    networks:
+      - roboshopnw
+  catalogue:
+    image: catalogue:v1.0
+    networks:
+      - roboshopnw
+  web:
+   image: web:v1.0
+   networks:
+      - roboshopnw
+   ports:
+      - "80:80"
