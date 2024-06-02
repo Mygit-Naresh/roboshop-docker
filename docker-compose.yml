@@ -1,3 +1,7 @@
+networks:
+  outside:
+    external: true
+    name: roboshopnw
 services:
   mongodb:
     image: mongdb:v1.0
