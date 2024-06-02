@@ -6,20 +6,15 @@ services:
   mongodb:
     image: mongdb:v1.0
     container_name: mongodb
-    networks:
-      - roboshopnw
+    
   catalogue:
     image: catalogue:v1.0
     container_name: catalogue
-    networks:
-      - roboshopnw
     depends_on: 
       - mongodb
   web:
    image: web:v1.0
-   container_name: catalogue
-   networks:
-      - roboshopnw
+   container_name: web
    ports:
       - "80:80"
    depends_on: 
