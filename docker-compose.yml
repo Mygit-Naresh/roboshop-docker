@@ -49,14 +49,20 @@ services:
       - mysql
       - cart
   Rabbitmq:
-       image: rabbitmq
-       environment: 
-       - RABBITMQ_DEFAULT_USER=roboshop \
-       - RABBITMQ_DEFAULT_PASS=roboshop123 \
+      image: rabbitmq
+      environment: 
+      - RABBITMQ_DEFAULT_USER=roboshop \
+      - RABBITMQ_DEFAULT_PASS=roboshop123 \
   payment:
-       image: payment:v1.0
-       container_name: payment
-       depends_on: 
-       - Rabbitmq
+      image: payment:v1.0
+      container_name: payment
+      environment:
+      - AMQP_USER=roboshop
+      - AMQP_PASS=roboshop123
+      depends_on: 
+      - Rabbitmq
+      - cart
+      - user
+
 
       
