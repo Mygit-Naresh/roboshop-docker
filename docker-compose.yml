@@ -21,6 +21,7 @@ services:
       - catalogue
   redis:
     image: redis
+    container_name: redis
   user:
     image: user:v1.0
     container_name: user
