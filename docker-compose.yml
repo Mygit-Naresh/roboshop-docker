@@ -56,9 +56,6 @@ services:
   payment:
       image: payment:v1.0
       container_name: payment
-      environment:
-      - AMQP_USER=roboshop
-      - AMQP_PASS=roboshop123
       depends_on: 
       - Rabbitmq
       - cart
