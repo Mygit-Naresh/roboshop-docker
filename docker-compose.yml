@@ -4,7 +4,7 @@ networks:
     name: roboshopnw
 services:
   mongodb:
-    image: mongdb:v1.0
+    image: mongodb:v1.0
     container_name: mongodb
     
   catalogue:
@@ -19,6 +19,8 @@ services:
       - "80:80"
    depends_on: 
       - catalogue
+      - cart
+      - user
   redis:
     image: redis
     
