@@ -19,3 +19,12 @@ services:
       - "80:80"
    depends_on: 
       - catalogue
+  redis:
+    image: redis:v1.0
+  user:
+    image: user:v1.0
+    container_name: user
+    depends_on: 
+      - redis
+      - mongodb
+      - cart
