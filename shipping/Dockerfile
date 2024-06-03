@@ -1,7 +1,4 @@
-FROM debian:10 AS build
-
-RUN apt-get update && apt-get -y install maven
-
+FROM maven
 WORKDIR /opt/shipping
 
 COPY pom.xml /opt/shipping/
