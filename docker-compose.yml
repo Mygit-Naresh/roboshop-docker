@@ -37,3 +37,9 @@ services:
     depends_on: 
       - redis
       - catalogue
+  shipping:
+     image: shipping:v1.0
+     container_name: shipping
+     depends_on: 
+      - mysql
+      
