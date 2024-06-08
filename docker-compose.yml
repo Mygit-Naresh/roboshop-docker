@@ -25,7 +25,7 @@ services:
       - payment
   redis:
     image: redis
-    
+    container_name: redis
   user:
     image: user:v1.0
     container_name: user
@@ -50,6 +50,7 @@ services:
       - cart
   Rabbitmq:
     image: rabbitmq
+    container_name: rabbitmq
     environment: 
       - RABBITMQ_DEFAULT_USER=roboshop \
       - RABBITMQ_DEFAULT_PASS=roboshop123 \
