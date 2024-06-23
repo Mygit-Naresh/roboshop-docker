@@ -70,8 +70,8 @@ services:
     image: rabbitmq
     container_name: rabbitmq
     environment: 
-      - RABBITMQ_DEFAULT_USER=roboshop \
-      - RABBITMQ_DEFAULT_PASS=roboshop123 \
+      - RABBITMQ_DEFAULT_USER=roboshop
+      - RABBITMQ_DEFAULT_PASS=roboshop123
   payment:
     image: payment:v1.0
     container_name: payment
